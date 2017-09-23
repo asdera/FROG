@@ -20,6 +20,7 @@
   "homepage": "https://github.com/xerodragon72/Blink#readme",
   "dependencies": {
     "electron": "^1.7.6",
+    "electron-positioner": "^3.0.0",
     "electron-reload": "^1.2.1",
     "jquery": "^3.2.1"
   },

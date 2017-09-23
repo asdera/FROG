@@ -2,6 +2,7 @@ const { app, BrowserWindow } = require('electron')
 const path = require('path')
 const url = require('url')
 
+
 var $ = require('jquery');
 
 require('electron-reload')
@@ -29,6 +30,7 @@ function createWindow() {
     win.on('closed', () => {
         win = null
     })
+
 }
 
 app.on('ready', createWindow)
