@@ -6,7 +6,6 @@ window.speechSynthesis.onvoiceschanged = function(){
 rate = 1
 	
 function setTheVoices(){
-	console.log(voices)
 	for (i = 0; i < voices.length; i++) {
 		
 		options.append("<option value='" + voices[i].name + "'>" + voices[i].name + "</option>")
@@ -32,7 +31,6 @@ $(document).ready(function() {
 
 	options = $('#options')
 	$('.speed').click(function(){
-		console.log('aa')
 		rate = this.value
 	})
 	setTheVoices()
