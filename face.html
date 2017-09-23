@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+
+    <!-- normal script imports etc  -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./js/affdex.js"></script>
+    <script src="./js/faceRecognition.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div hidden class="col-md-8" id="affdex_elements" style="width:680px;height:480px;"></div>
+        </div>
+    </div>
+    <div>
+        <button id="start" onclick="onStart()">Start</button>
+        <button id="stop" onclick="onStop()">Stop</button>
+    </div>
+    <div id="gesture">The current Gesture is: </div>
+
+</body>
+</html>
