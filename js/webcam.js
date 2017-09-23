@@ -12,7 +12,7 @@ function start() {
 
             // Success Callback
             function (localMediaStream) {
-                var vid = document.getElementById('camera-stream');
+                var vid = document.getElementById('inputVideo');
 
                 vid.src = window.URL.createObjectURL(localMediaStream);
             },
