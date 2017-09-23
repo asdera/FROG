@@ -14,7 +14,8 @@ function createWindow() {
         height: 600,
         'skip-taskbar': false,
         'icon': __dirname + './res/icon.png',
-        'frame': true
+        'frame': false,
+        'transparent': true
     })
 
     win.loadURL(url.format({
