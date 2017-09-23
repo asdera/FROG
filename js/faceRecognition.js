@@ -1,20 +1,29 @@
-var divRoot = $("#affdex_elements")[0];
-var width = 640;
-var height = 480;
+/*
+   Face detector configuration - If not specified, defaults to F
+   affdex.FaceDetectorMode.LARGE_FACES
+   affdex.FaceDetectorMode.LARGE_FACES=Faces occupying large portions of the frame
+   affdex.FaceDetectorMode.SMALL_FACES=Faces occupying small portions of the frame
+*/
 var faceMode = affdex.FaceDetectorMode.LARGE_FACES;
-var detector = new affdex.CameraDetector(divRoot, width, height, faceMode);
+
+//Construct a FrameDetector and specify the image width / height and face detector mode.
+var detector = new affdex.FrameDetector(faceMode);
 
 //detector.detectAllEmotions();
 detector.detectAllExpressions();
 
-detector.addEventListener("onInitializeSuccess", function() {
-  $("#face_video_canvas").css("display", "block");
-  $("#face_video").css("display", "none");
+detector.addEventListener("onInitializeSuccess", function () {
+    console.log("Detector loaded successfully");
+});
+
+detector.addEventListener("onInitializeFailure", function () {
+    console.log("Failed to load detector");
 });
 
 function onStart() {
   if (detector && !detector.isRunning) {
-    detector.start();
+      detector.start();
+      console.log("detector started")
   }
 };
 
