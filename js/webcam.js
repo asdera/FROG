@@ -1,8 +1,13 @@
+var stream;
 var video = document.getElementById('inputVideo');
 
-if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
-        video.src = window.URL.createObjectURL(stream);
-        video.play();
-    });
-}
+navigator.webkitGetUserMedia(
+    { video: true }, // Options
+    function (localMediaStream) { // Success
+        stream = localMediaStream;
+        video.src = window.webkitURL.createObjectURL(stream);
+    },
+    function (err) { // Failure
+        alert('getUserMedia failed: Code ' + err.code);
+    }
+);
