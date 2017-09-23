@@ -11,7 +11,7 @@ body {
     height: 100%;
     width: 100%;
     overflow:hidden;
-    background-color: rgba(0, 38, 255,0.2)
+    background-color: rgba(0, 38, 255,0.3)
 }
 .btn-cont {
     text-align: center;
