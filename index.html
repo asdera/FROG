@@ -1,14 +1,31 @@
+﻿
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Frog</title>
     <link href="./css/main.css" rel="stylesheet" />
+    <script>
+        function go() {
+            var shell = require('electron').shell;
+            event.preventDefault();
+            shell.openExternal('https://patrickzebinghe.github.io/');
+        }
+    </script>
 </head>
 <body>
     <h1>Frog</h1>
 
     <div class='btn-cont'>
-        <a class='btn' href='face.html'>
+        <a class='btn' onclick="go()">
             Run!
+            <span class='line-1'></span>
+            <span class='line-2'></span>
+            <span class='line-3'></span>
+            <span class='line-4'></span>
+        </a>
+    </div>
+    <div class='btn-cont'>
+        <a class='btn' href='other.html'>
+            Other Features
             <span class='line-1'></span>
             <span class='line-2'></span>
             <span class='line-3'></span>
